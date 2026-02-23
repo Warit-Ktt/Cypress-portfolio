@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2025-11-25T15:40:47.212Z",
+    "end": "2025-11-25T15:40:52.109Z",
+    "duration": 4897,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a663ebe6-5bd4-4774-8b40-f3de2879824c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo\\date.cy.js",
+      "file": "cypress\\e2e\\demo\\date.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8ec00979-af25-4556-9666-c9da365d3fb9",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1",
+              "fullTitle": "template spec 1",
+              "timedOut": null,
+              "duration": 3127,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://letcode.in/calendar');\n// cy.get('#birthday').click('right');\nconst date = new Date();\nconst dateStr = date.toISOString().slice(0, 10); // e.g. \"2025-11-23\"\ncy.get('#birthday').clear().type(dateStr);\ncy.get('body > app-root > app-calendar > section > div > div > div.column.is-6-desktop.is-8-tablet > div > div > div > p').should('have.text', dateStr);",
+              "err": {},
+              "uuid": "6d0a2d2d-feba-4fff-8685-d50921bb9e65",
+              "parentUUID": "8ec00979-af25-4556-9666-c9da365d3fb9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2",
+              "fullTitle": "template spec 2",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('https://letcode.in/calendar');\nfunction formatLocalDate(d) {\n  const yyyy = d.getFullYear();\n  const mm = String(d.getMonth() + 1).padStart(2, '0'); // months are 0-based\n  const dd = String(d.getDate()).padStart(2, '0');\n  return `${yyyy}-${mm}-${dd}`;\n}\n// freeze to Nov 23, 2025 (month is 0-based)\nconst fixed = new Date(2025, 10, 23);\ncy.clock(fixed.getTime());\ncy.visit('https://letcode.in/calendar');\nconst dateStr = formatLocalDate(fixed);\ncy.get('#birthday').clear().type(dateStr);",
+              "err": {},
+              "uuid": "73a8af27-4341-4739-9d49-91326799e9ef",
+              "parentUUID": "8ec00979-af25-4556-9666-c9da365d3fb9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6d0a2d2d-feba-4fff-8685-d50921bb9e65"
+          ],
+          "failures": [],
+          "pending": [
+            "73a8af27-4341-4739-9d49-91326799e9ef"
+          ],
+          "skipped": [],
+          "duration": 3127,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

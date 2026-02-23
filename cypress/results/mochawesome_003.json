@@ -1,0 +1,172 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 1,
+    "failures": 2,
+    "start": "2025-11-25T15:40:52.989Z",
+    "end": "2025-11-25T15:41:03.047Z",
+    "duration": 10058,
+    "testsRegistered": 4,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 25,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3aa71a8d-0c7d-40f6-90a6-b01d9b21d2a3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo\\dropdown.cy.js",
+      "file": "cypress\\e2e\\demo\\dropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0293ac2e-a20a-4480-bae8-178d7fa26d7e",
+          "title": "List and Dropdown",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "visit",
+              "fullTitle": "List and Dropdown visit",
+              "timedOut": null,
+              "duration": 432,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/user/list/');",
+              "err": {},
+              "uuid": "59f32980-5233-4f21-961b-b35d31c04aa2",
+              "parentUUID": "0293ac2e-a20a-4480-bae8-178d7fa26d7e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "List",
+              "fullTitle": "List and Dropdown List",
+              "timedOut": null,
+              "duration": 4348,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#select-status').click();\ncy.get('#option-select-status-1').should('have.text', 'Pending');\ncy.get('#option-select-status-1').click();\ncy.get('#select-status').should('have.text', 'Pending');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#select-status`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#select-status`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/dropdown.cy.js:9:7)",
+                "diff": null
+              },
+              "uuid": "911b37c3-8c00-47a9-b9a8-db434ad5388c",
+              "parentUUID": "0293ac2e-a20a-4480-bae8-178d7fa26d7e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "List",
+              "fullTitle": "List and Dropdown List",
+              "timedOut": null,
+              "duration": 4078,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#select-status').click();\ncy.get('[role=\"option\"]').each((listItem, index) => {\n  var optionText = listItem.text();\n  cy.log(optionText);\n  if (index == 2) {\n    cy.wrap(listItem).click();\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#select-status`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#select-status`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/dropdown.cy.js:16:7)",
+                "diff": null
+              },
+              "uuid": "3fcf4d20-7ef4-48e3-80a9-228a127c6e2c",
+              "parentUUID": "0293ac2e-a20a-4480-bae8-178d7fa26d7e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "visit Facebook",
+              "fullTitle": "List and Dropdown visit Facebook",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "// cy.visit('www.facebook.com/')\n// cy.get('[data-testid=\"open-registration-form-button\"]').click()\n// select dropdown value - month\n// select by visible text\n// cy.get('#month').select('Jun')\n// select by value attribute\n// cy.get('#month').select('1')\n// select by index\n// cy.get('#month').select(7).should('have.value', '8')\n// cy.get('#month').within(() => {\n//   cy.get('option').each((listItem, index) => {\n//     var text = listItem.text()\n//     cy.log(text)\n//   })\n// })",
+              "err": {},
+              "uuid": "15fcbeea-4b33-47ec-9254-5adeec43abb3",
+              "parentUUID": "0293ac2e-a20a-4480-bae8-178d7fa26d7e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "59f32980-5233-4f21-961b-b35d31c04aa2"
+          ],
+          "failures": [
+            "911b37c3-8c00-47a9-b9a8-db434ad5388c",
+            "3fcf4d20-7ef4-48e3-80a9-228a127c6e2c"
+          ],
+          "pending": [
+            "15fcbeea-4b33-47ec-9254-5adeec43abb3"
+          ],
+          "skipped": [],
+          "duration": 8858,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

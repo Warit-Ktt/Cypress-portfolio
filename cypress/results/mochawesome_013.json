@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2025-11-25T15:41:46.675Z",
+    "end": "2025-11-25T15:41:49.095Z",
+    "duration": 2420,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9cb01663-2572-49f9-a22c-34f7e143d8bb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\workshop\\logintoweb.cy.js",
+      "file": "cypress\\e2e\\workshop\\logintoweb.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ab1f2cef-5ab3-4f04-8b34-32477e11e2ab",
+          "title": "My work",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "My work passes",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/login/');\ncy.get('.MuiTypography-h5').should('contain.text', 'Welcome');\ncy.get('#__next > div.layout-wrapper.MuiBox-root.css-33gw4 > div > div > div.MuiBox-root.css-15tnlg1 > div > div > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1emx2cy > div > span > strong:nth-child(1)').then(label => {\n  var labelUser = label.text();\n  console.log(labelUser);\n  expect(labelUser).to.contain('user.test@krupbeam.com');\n  cy.get('#email').type(labelUser);\n});\ncy.get('#__next > div.layout-wrapper.MuiBox-root.css-33gw4 > div > div > div.MuiBox-root.css-15tnlg1 > div > div > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1emx2cy > div > span > strong:nth-child(2)').then(label => {\n  var labelPassword = label.text();\n  console.log(labelPassword);\n  expect(labelPassword).to.contain('jKNsrapwLNV7eBN');\n  cy.get('form').as('formLogin');\n  cy.get('@formLogin').find('input').last().type(labelPassword);\n});\ncy.get('#btn-login').click();\ncy.get('#__next > div.layout-wrapper.css-uinsfl > div.layout-content-wrapper.MuiBox-root.css-34b9xr > main > div > div:nth-child(1) > div > div.MuiCardHeader-root.css-1lbhvlm > div > span').should('contain.text', 'Search Filters');",
+              "err": {},
+              "uuid": "d4eddf1d-5b39-4e43-a2dd-2c7359504a40",
+              "parentUUID": "ab1f2cef-5ab3-4f04-8b34-32477e11e2ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "d4eddf1d-5b39-4e43-a2dd-2c7359504a40"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "4d25cc03-a354-4c15-bf03-ee159936e5d4",
+          "title": "Solution",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test case 3",
+              "fullTitle": "Solution test case 3",
+              "timedOut": null,
+              "duration": 1192,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/login/');\ncy.get('#__next > div.layout-wrapper.MuiBox-root.css-33gw4 > div > div > div.MuiBox-root.css-15tnlg1 > div > div > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1emx2cy > div > span > strong:nth-child(1)').then(label => {\n  var email = label.text();\n  expect(email).to.eq('user.test@krupbeam.com');\n  cy.get('#email').type(email);\n});\ncy.get('#__next > div.layout-wrapper.MuiBox-root.css-33gw4 > div > div > div.MuiBox-root.css-15tnlg1 > div > div > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1emx2cy > div > span > strong:nth-child(2)').then(pwdLabel => {\n  var password = pwdLabel.text();\n  expect(password).to.eq('jKNsrapwLNV7eBN');\n  cy.get('#__next > div.layout-wrapper.MuiBox-root.css-33gw4 > div > div > div.MuiBox-root.css-15tnlg1 > div > div > form > div.MuiFormControl-root.MuiFormControl-fullWidth.css-tzsjye > div > input').type(password);\n});\ncy.get('#btn-login').should('be.visible').and('have.text', 'Login');\ncy.contains('Login').click();",
+              "err": {},
+              "uuid": "595c2b23-7677-46b2-bc6a-0f16a8628c82",
+              "parentUUID": "4d25cc03-a354-4c15-bf03-ee159936e5d4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "595c2b23-7677-46b2-bc6a-0f16a8628c82"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

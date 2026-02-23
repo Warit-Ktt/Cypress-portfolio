@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 1,
+    "failures": 0,
+    "start": "2025-11-25T15:41:38.366Z",
+    "end": "2025-11-25T15:41:45.442Z",
+    "duration": 7076,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 33.33333333333333,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00bc52b0-281f-4ab6-a322-818185a69b6d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo\\view.cy.js",
+      "file": "cypress\\e2e\\demo\\view.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5aa0f4f1-2c08-4cdb-afca-050a1db71333",
+          "title": "view",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1280",
+              "fullTitle": "view 1280",
+              "timedOut": null,
+              "duration": 3206,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1280, 720);\ncy.visit('https://example.cypress.io');\ncy.wait(3000);",
+              "err": {},
+              "uuid": "bb3ef29e-b979-4462-a801-312b54d10d86",
+              "parentUUID": "5aa0f4f1-2c08-4cdb-afca-050a1db71333",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "1980",
+              "fullTitle": "view 1980",
+              "timedOut": null,
+              "duration": 3093,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1980, 1080);\ncy.visit('https://example.cypress.io');\ncy.wait(3000);",
+              "err": {},
+              "uuid": "99c0a394-ff0b-42c0-ad3e-ed61c65eb194",
+              "parentUUID": "5aa0f4f1-2c08-4cdb-afca-050a1db71333",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "iphoneX",
+              "fullTitle": "view iphoneX",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.viewport('iphone-x');\ncy.visit('https://example.cypress.io');\ncy.screenshot({\n  capture: 'fullPage'\n});\ncy.get('body > div.banner > div ').screenshot('banner-iphoneX');",
+              "err": {},
+              "uuid": "caa45c37-20a6-4f7f-987e-4eebb63ebf24",
+              "parentUUID": "5aa0f4f1-2c08-4cdb-afca-050a1db71333",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb3ef29e-b979-4462-a801-312b54d10d86",
+            "99c0a394-ff0b-42c0-ad3e-ed61c65eb194"
+          ],
+          "failures": [],
+          "pending": [
+            "caa45c37-20a6-4f7f-987e-4eebb63ebf24"
+          ],
+          "skipped": [],
+          "duration": 6299,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

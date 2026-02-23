@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-25T15:41:04.242Z",
+    "end": "2025-11-25T15:41:06.151Z",
+    "duration": 1909,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bb1f1330-de10-4830-a63d-7bfa07487707",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo\\extract.cy.js",
+      "file": "cypress\\e2e\\demo\\extract.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "24f1b4c3-86ff-4bdc-abca-8c08b08be774",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 753,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/login/');\n// 1\ncy.get('.MuiTypography-h5').should('contain', 'Welcome');\n// 2\ncy.get('.MuiTypography-h5').then(label => {\n  var labelText = label.text();\n  console.log(labelText);\n  expect(labelText).to.contain('Welcome');\n});\n// 3\ncy.get('.MuiTypography-h5').invoke('text').then(label => {\n  expect(label).to.contain('Welcome');\n});\n// 4\ncy.get('#email').type('test@gmail.com');\ncy.get('#email').invoke('prop', 'value').should('eq', 'test@gmail.com').then(email => {\n  expect(email).to.contain('test@gmail.com');\n});",
+              "err": {},
+              "uuid": "43a59e6b-f210-471d-8e44-34506dd23b91",
+              "parentUUID": "24f1b4c3-86ff-4bdc-abca-8c08b08be774",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "43a59e6b-f210-471d-8e44-34506dd23b91"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 753,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

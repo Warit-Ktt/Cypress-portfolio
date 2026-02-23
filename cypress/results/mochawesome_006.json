@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-25T15:41:09.354Z",
+    "end": "2025-11-25T15:41:13.102Z",
+    "duration": 3748,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f6e72e8a-c038-4627-8a50-4e0573f68a2b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo\\popup.cy.js",
+      "file": "cypress\\e2e\\demo\\popup.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ad062525-2fd9-4fa8-80a1-c0cd6a862a70",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "3",
+              "fullTitle": "template spec 3",
+              "timedOut": null,
+              "duration": 2307,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://letcode.in/alert');\ncy.get('#accept').click();\ncy.on('window:alert', msg => {\n  expect(msg).to.contain('Welcome');\n  expect(msg).to.equal('Hey! Welcome to LetCode');\n});",
+              "err": {},
+              "uuid": "bfa07d8b-036f-48a2-9243-6f6ae4b9f19e",
+              "parentUUID": "ad062525-2fd9-4fa8-80a1-c0cd6a862a70",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bfa07d8b-036f-48a2-9243-6f6ae4b9f19e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2307,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

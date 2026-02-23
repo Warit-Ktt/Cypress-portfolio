@@ -1,0 +1,175 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-11-25T15:41:21.196Z",
+    "end": "2025-11-25T15:41:34.999Z",
+    "duration": 13803,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8dc0dad3-f7e8-4244-b5f0-542a2ad1e20b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo\\table.cy.js",
+      "file": "cypress\\e2e\\demo\\table.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd2f5cf3-9c3f-47de-b5c2-ccf89c83ce1d",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 419,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/apps/user/view/1/');",
+              "err": {},
+              "uuid": "d5ce795d-a9e4-4dbf-b5a6-15010fd119ed",
+              "parentUUID": "fd2f5cf3-9c3f-47de-b5c2-ccf89c83ce1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "thead",
+              "fullTitle": "template spec thead",
+              "timedOut": null,
+              "duration": 4351,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// get table, find row ... then get the ... column\ncy.get('thead').find('tr').then(tableRow => {\n  cy.wrap(tableRow).find('th').eq(2).should('contain', 'Progress');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `thead`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `thead`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/table.cy.js:10:7)",
+                "diff": null
+              },
+              "uuid": "33775def-dc86-43ae-89dc-1a0e7875d97e",
+              "parentUUID": "fd2f5cf3-9c3f-47de-b5c2-ccf89c83ce1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tbody 1 index",
+              "fullTitle": "template spec tbody 1 index",
+              "timedOut": null,
+              "duration": 4065,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// get table, find row index ... then get the ... column\ncy.get('tbody tr').eq(1).find('td').then(tableColumns => {\n  cy.wrap(tableColumns).eq(2).should('contain', '18%');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody tr`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody tr`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/table.cy.js:17:7)",
+                "diff": null
+              },
+              "uuid": "5462c2d2-4583-4aa8-83dd-4f52320d7c8d",
+              "parentUUID": "fd2f5cf3-9c3f-47de-b5c2-ccf89c83ce1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tbody 2 name",
+              "fullTitle": "template spec tbody 2 name",
+              "timedOut": null,
+              "duration": 4074,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// get table, find row with name ... then get the ... column\ncy.get('tbody').contains('tr', '99/109').then(tableRow => {\n  cy.wrap(tableRow).find('td').eq(3).should('contain', '342');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/table.cy.js:24:7)",
+                "diff": null
+              },
+              "uuid": "ceda7422-968e-4f60-9877-f87ae484bf89",
+              "parentUUID": "fd2f5cf3-9c3f-47de-b5c2-ccf89c83ce1d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d5ce795d-a9e4-4dbf-b5a6-15010fd119ed"
+          ],
+          "failures": [
+            "33775def-dc86-43ae-89dc-1a0e7875d97e",
+            "5462c2d2-4583-4aa8-83dd-4f52320d7c8d",
+            "ceda7422-968e-4f60-9877-f87ae484bf89"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12909,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

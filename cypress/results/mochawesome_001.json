@@ -1,0 +1,198 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 1,
+    "failures": 3,
+    "start": "2025-11-25T15:40:26.912Z",
+    "end": "2025-11-25T15:40:45.995Z",
+    "duration": 19083,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 20,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ede9711d-94da-42f2-b570-a3d9808f6b61",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demo\\check.cy.js",
+      "file": "cypress\\e2e\\demo\\check.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "463799a8-2671-413f-9388-332af1fd50a8",
+          "title": "check box and radio",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "check box and radio login",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/login/');\ncy.get('#email').type('user.test@krupbeam.com');\ncy.get('#__next > div.layout-wrapper.MuiBox-root.css-33gw4 > div > div > div.MuiBox-root.css-15tnlg1 > div > div > form > div.MuiFormControl-root.MuiFormControl-fullWidth.css-tzsjye > div > input').type('jKNsrapwLNV7eBN');\ncy.get('#btn-login').click();",
+              "err": {},
+              "uuid": "2aed3121-b347-4a3b-91fb-bb0a7dfa2ad9",
+              "parentUUID": "463799a8-2671-413f-9388-332af1fd50a8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "goto",
+              "fullTitle": "check box and radio goto",
+              "timedOut": null,
+              "duration": 4696,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/apps/user/view/1/');\ncy.contains('Notification').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Notification' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Notification' but never did.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/check.cy.js:16:7)",
+                "diff": null
+              },
+              "uuid": "8b421363-90af-4a2e-80d4-11a552f9b1f2",
+              "parentUUID": "463799a8-2671-413f-9388-332af1fd50a8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check",
+              "fullTitle": "check box and radio check",
+              "timedOut": null,
+              "duration": 4086,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('tbody tr:nth-child(1) td:nth-child(2) span:nth-child(1) input:nth-child(1)').should('not.be.disabled');\ncy.get('tbody tr:nth-child(1) td:nth-child(3) span:nth-child(1) input:nth-child(1)').should('not.be.disabled');\ncy.get('tbody tr:nth-child(1) td:nth-child(2) span:nth-child(1) input:nth-child(1)').uncheck();\ncy.get('tbody tr:nth-child(1) td:nth-child(3) span:nth-child(1) input:nth-child(1)').check();\n// cy.contains('tr', 'New for you').find('input[type=\"checkbox\"]').eq(0).uncheck({ force: true });\n// cy.contains('tr', 'New for you').find('input[type=\"checkbox\"]').eq(1).check({ force: true });",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody tr:nth-child(1) td:nth-child(2) span:nth-child(1) input:nth-child(1)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody tr:nth-child(1) td:nth-child(2) span:nth-child(1) input:nth-child(1)`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/check.cy.js:20:89)",
+                "diff": null
+              },
+              "uuid": "29b99aac-f70f-4652-86a7-7734d8db0786",
+              "parentUUID": "463799a8-2671-413f-9388-332af1fd50a8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checkall",
+              "fullTitle": "check box and radio checkall",
+              "timedOut": null,
+              "duration": 4075,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.MuiTableContainer-root [type=\"checkbox\"]').check();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.MuiTableContainer-root [type=\"checkbox\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.MuiTableContainer-root [type=\"checkbox\"]`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/check.cy.js:31:7)",
+                "diff": null
+              },
+              "uuid": "a6c2b8df-2a0c-47ef-af21-443540154717",
+              "parentUUID": "463799a8-2671-413f-9388-332af1fd50a8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "radio",
+              "fullTitle": "check box and radio radio",
+              "timedOut": null,
+              "duration": 4767,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automate-test.stpb-digital.com/user/form/');\ncy.get('input[value=\"female\"]').check();\ncy.get('input[value=\"male\"]').check();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[value=\"female\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[value=\"female\"]`, but never found it.\n    at Context.eval (webpack://cypress-proj/./cypress/e2e/demo/check.cy.js:36:7)",
+                "diff": null
+              },
+              "uuid": "6941741f-55f1-4b7e-8297-a9844ce60a44",
+              "parentUUID": "463799a8-2671-413f-9388-332af1fd50a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8b421363-90af-4a2e-80d4-11a552f9b1f2",
+            "29b99aac-f70f-4652-86a7-7734d8db0786",
+            "a6c2b8df-2a0c-47ef-af21-443540154717",
+            "6941741f-55f1-4b7e-8297-a9844ce60a44"
+          ],
+          "pending": [
+            "2aed3121-b347-4a3b-91fb-bb0a7dfa2ad9"
+          ],
+          "skipped": [],
+          "duration": 17624,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

@@ -11,7 +11,6 @@ module.exports = defineConfig({
     },
     testIsolation: false,
     experimaentalStudio: true,
-    reporter: 'mochawesome',
     reporterOptions: {
       reportDir: 'cypress/results',
       overwrite: false,

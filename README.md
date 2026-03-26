@@ -23,7 +23,6 @@ Through this course, I gained hands-on experience in:
 * Cypress
 * JavaScript
 * Node.js
-* Mochawesome Reporter
 * GitHub
 
 ## Project Structure
